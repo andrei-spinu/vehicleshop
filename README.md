@@ -1,2 +1,1 @@
-# Vehicle_Shop 
-#JAVA project
+# Vehicle_Shop with JAVA 
