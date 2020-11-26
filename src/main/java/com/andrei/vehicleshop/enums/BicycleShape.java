@@ -1,6 +1,6 @@
 package com.andrei.vehicleshop.enums;
 
-public enum BicycleType {
+public enum BicycleShape {
     CRUISER,
     BMX,
     FOLDING,
