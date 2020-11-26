@@ -46,5 +46,15 @@ public class RatingServiceImpl implements RatingService{
         ratingRepository.save(updatedRating);
     }
 
+    @Override
+    public void deleteById(Long id) {
+        ratingRepository.deleteById(id);
+    }
+
+    @Override
+    public void deleteAll() {
+        ratingRepository.deleteAll();
+    }
+
 
 }

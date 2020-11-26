@@ -12,4 +12,6 @@ public interface RatingService {
     void addRating(Rating rating);
     Rating getRatingById(Long id);
     void updateRating(Long id, Rating rating);
+    void deleteById(Long id);
+    void deleteAll();
 }

@@ -2,6 +2,7 @@ package com.andrei.vehicleshop.controllers;
 
 import com.andrei.vehicleshop.models.Rating;
 import com.andrei.vehicleshop.services.RatingService;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public class RatingController {
 
     @PostMapping
     public void addRating(@RequestBody  Rating rating){
+
         ratingService.addRating(rating);
     }
 
@@ -29,5 +31,21 @@ public class RatingController {
    @GetMapping(value = "/{id}")
     public Rating getRatingById(@PathVariable("id") Long id){
         return ratingService.getRatingById(id);
+   }
+
+   @PutMapping("/{id}")
+   @ResponseStatus(HttpStatus.ACCEPTED)
+   public void updateRating(@PathVariable("id") Long id, Rating rating){
+        ratingService.updateRating(id,rating);
+   }
+
+   @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable("id") Long id){
+        ratingService.deleteById(id);
+   }
+
+   @DeleteMapping
+    public void deleteAll(){
+        ratingService.deleteAll();
    }
 }
